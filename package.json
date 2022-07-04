@@ -616,6 +616,7 @@
     "type": "git",
     "url": "git+https://github.com/hislordshipprof/Awesome-book-ES6.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
