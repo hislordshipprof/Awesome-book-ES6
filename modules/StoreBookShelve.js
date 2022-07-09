@@ -2,7 +2,7 @@
 export default class StoreBookShelve {
   static getBooks() {
     let books;
-    if (localStorage.getItem("books") === null) {
+    if (localStorage.getItem('books') === null) {
       books = [];
     } else {
       books = JSON.parse(localStorage.getItem('books'));
@@ -13,7 +13,7 @@ export default class StoreBookShelve {
   static StoreBook(book) {
     const books = this.getBooks();
     books.push(book);
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books));
   }
 
   static removeBook(title) {
@@ -23,6 +23,6 @@ export default class StoreBookShelve {
         books.splice(index, 1);
       }
     });
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books));
   }
 }
