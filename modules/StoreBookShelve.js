@@ -1,8 +1,8 @@
 // Book store class
-export default class BookStore {
+export default class StoreBookShelve {
   static getBooks() {
     let books;
-    if (localStorage.getItem('books') === null) {
+    if (localStorage.getItem("books") === null) {
       books = [];
     } else {
       books = JSON.parse(localStorage.getItem('books'));
@@ -10,10 +10,10 @@ export default class BookStore {
     return books;
   }
 
-  static addBookToStore(book) {
+  static StoreBook(book) {
     const books = this.getBooks();
     books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem("books", JSON.stringify(books));
   }
 
   static removeBook(title) {
@@ -23,6 +23,6 @@ export default class BookStore {
         books.splice(index, 1);
       }
     });
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem("books", JSON.stringify(books));
   }
 }

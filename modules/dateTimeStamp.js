@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import { DateTime } from './luxon.js';
 
-const displayDate = () => {
+const dateTimeStamp = () => {
   const dt = DateTime.local();
 
   const newDate = dt.toLocaleString({
@@ -15,4 +15,4 @@ const displayDate = () => {
   document.querySelector('.date').textContent = `${newDate}, ${newTime}`;
 };
 
-export default displayDate;
+export default dateTimeStamp;
