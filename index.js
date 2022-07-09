@@ -1,13 +1,13 @@
 /* eslint-disable import/extensions */
-import UI from './modules/UI.js';
+import displayPage from './modules/displayPage.js';
 import navigationEvent from './modules/navigationEvent.js';
-import addBookEvent from './modules/addBookEvent.js';
+import BookEvent from './modules/BookEvent.js';
 import removeBookEvent from './modules/removeBookEvent.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  UI.displayBooks();
+  displayPage.listBooks();
 });
 
 navigationEvent();
-addBookEvent();
+BookEvent();
 removeBookEvent();

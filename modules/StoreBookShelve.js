@@ -1,5 +1,5 @@
 // Book store class
-export default class BookStore {
+export default class StoreBookShelve {
   static getBooks() {
     let books;
     if (localStorage.getItem('books') === null) {
@@ -10,7 +10,7 @@ export default class BookStore {
     return books;
   }
 
-  static addBookToStore(book) {
+  static StoreBook(book) {
     const books = this.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));

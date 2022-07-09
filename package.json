@@ -1,5 +1,5 @@
 {
-  "name": "awesome-books-with-ES6",
+  "name": "Awesome-book-ES6",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XsidX/awesome-books-with-ES6.git"
+    "url": "git+https://github.com/hislordshipprof/Awesome-book-ES6.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/XsidX/awesome-books-with-ES6/issues"
+    "url": "https://github.com/hislordshipprof/Awesome-book-ES6/issues"
   },
-  "homepage": "https://github.com/XsidX/awesome-books-with-ES6#readme",
+  "homepage": "https://github.com/hislordshipprof/Awesome-book-ES6#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",

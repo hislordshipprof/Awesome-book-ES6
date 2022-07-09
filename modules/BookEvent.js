@@ -1,9 +1,9 @@
 /* eslint-disable import/extensions */
 import Book from './Book.js';
-import UI from './UI.js';
-import BookStore from './BookStore.js';
+import displayPage from './displayPage.js';
+import StoreBookShelve from './StoreBookShelve.js';
 
-const addBookEvent = () => {
+const BookEvent = () => {
   // Event: Add Book
   document.querySelector('#form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -13,19 +13,19 @@ const addBookEvent = () => {
 
     // Validate form inputs
     if (title === '' || author === '') {
-      UI.showAlert('Please fill in all fields', 'error');
+      displayPage.Alert('Please fill in all fields', 'error');
     } else {
       const book = new Book(title, author);
 
-      UI.addBookToUI(book);
+      displayPage.addBookTodisplayPage(book);
 
-      BookStore.addBookToStore(book);
+      StoreBookShelve.StoreBook(book);
 
-      UI.clearFields();
+      displayPage.clearFields();
 
-      UI.showAlert('Book added', 'success');
+      displayPage.Alert('Book added', 'success');
     }
   });
 };
 
-export default addBookEvent;
+export default BookEvent;

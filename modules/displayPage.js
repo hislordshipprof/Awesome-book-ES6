@@ -1,21 +1,22 @@
 /* eslint-disable import/extensions */
-import BookStore from './BookStore.js';
-import displayDate from './displayDate.js';
-// class UI
-export default class UI {
+// eslint-disable-next-line import/no-unresolved
+import StoreBookShelve from './StoreBookShelve.js';
+import dateTimeStamp from './dateTimeStamp.js';
+// class displayPage
+export default class displayPage {
   // display books
-  static displayBooks() {
-    const books = BookStore.getBooks();
+  static listBooks() {
+    const books = StoreBookShelve.getBooks();
 
     books.forEach((book) => {
-      UI.addBookToUI(book);
+      displayPage.addBookList(book);
     });
 
-    displayDate();
+    dateTimeStamp();
   }
-  // add book to UI
+  // add book to displayPage
 
-  static addBookToUI(book) {
+  static addBookList(book) {
     const container = document.querySelector('.container');
 
     const ul = document.createElement('ul');
@@ -35,10 +36,10 @@ export default class UI {
     }
   }
 
-  static showAlert(message, className) {
+  static Alert(errormessage, className) {
     const div = document.createElement('div');
     div.className = `alert ${className}`;
-    div.appendChild(document.createTextNode(message));
+    div.appendChild(document.createTextNode(errormessage));
     const body = document.querySelector('body');
     const form = document.querySelector('#add-book');
     body.insertBefore(div, form);
